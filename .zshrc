@@ -10,12 +10,6 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -59,7 +53,7 @@ COMPLETION_WAITING_DOTS="true"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 
-# Would you like to use another custom folder than $ZSH/custom?
+# Custom folder for dotfiles and third-party plugins
 ZSH_CUSTOM=$HOME/.custom
 
 # Which plugins would you like to load?
@@ -83,7 +77,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -93,21 +86,9 @@ export LANG=en_US.UTF-8
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 DEFAULT_USER=$(whoami)
-# Bring in external plugins using Antigen
-# antigen bundle djui/alias-tips# Apply antigen transformations
-# All other antigen calls should be preceded by the "antigen apply" callantigen apply
-# source /usr/local/share/antigen/antigen.zsh
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-# export PATH="$PATH:$HOME/.rvm/bin"
 
 # rbenv configuration
 eval "$(rbenv init -)"
