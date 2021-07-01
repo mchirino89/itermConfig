@@ -9,5 +9,8 @@ alias cat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /de
 eval $(thefuck --alias)
 zstyle :omz:plugins:ssh-agent identities id_rsa
 
+# XCode
+alias cleanData="rm -Rf ~/Library/Developer/Xcode/DerivedData"
+
 # Fun stuff
 alias weather='curl -4 "http://wttr.in/~Montevideo?0&m"'
