@@ -1,16 +1,18 @@
 # Git 
 alias clone="git clone"
 alias commit="git commit -m"
-alias commitAll="git commit -am"
+alias commitAll="add . && git commit -am"
 alias pull="git pull"
 alias push="git push -u origin HEAD"
 alias gpf="git push -f"
 alias fetch="git fetch"
+alias merge="git merge"
 alias addAll="git add ."
 alias add="git add"
 alias dismiss="git checkout ."
+alias undo="git reset --soft HEAD~1"
 alias reset!="git reset --hard"
-alias amend!="git commit --amend --no-edit"
+alias amend!="add . && git commit --amend --no-edit"
 alias diff="git diff"
 alias show="git show"
 alias log="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
@@ -53,7 +55,7 @@ alias cleanUp="git fetch origin --prune"
 	alias newTag="git tag -s -a"
 
 	# Bloging
-	alias fixAuthor="git commit --amend --author="1657723+mchirino89@users.noreply.github.com" --no-edit"
+	alias fixAuthor="git commit --amend --author='Mauricio Chirino <1657723+mchirino89@users.noreply.github.com>' --no-edit"
 	alias hideEmail="git config user.email "1657723+mchirino89@users.noreply.github.com""
 
 

@@ -14,3 +14,7 @@ alias cleanData="rm -Rf ~/Library/Developer/Xcode/DerivedData"
 
 # Fun stuff
 alias weather='curl -4 "http://wttr.in/~Montevideo?0&m"'
+
+# Terminal
+alias ls="tree -C -L 1"
+alias listDirectories="tree -C -d -L 1"

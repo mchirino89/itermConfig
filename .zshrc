@@ -90,10 +90,6 @@ export LANG=en_US.UTF-8
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 DEFAULT_USER=$(whoami)
 
-# rbenv configuration
-eval "$(rbenv init -)"
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
-
 # Make Sublime default's editor
 export EDITOR='subl -w'
 
@@ -102,4 +98,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # reloads alias and function files
 alias rl="source $ZSH/oh-my-zsh.sh" 
 alias python=/usr/local/bin/python3
-alias config="/usr/bin/git --git-dir=${HOME}/.config/ --work-tree=${HOME}"
+alias config="/usr/bin/git --git-dir=${HOME}/.cfg/ --work-tree=${HOME}"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
